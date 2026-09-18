@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>105–115 年會考英文試題中的文法</title>
+<style>
+:root{
+  --paper:#FFFFFF; --ivory:#FBFAF7; --ink:#191917; --ink2:#43433F; --ink3:#77766F;
+  --line:#E4E0D6; --line2:#D2CDC0; --tint:#F4F2EB;
+  --accent:#8A5A3B; --accent-s:#F6EDE5;
+  --field:#4C6B8A; --field-s:#EDF2F7;
+  --explo:#7A6A2F; --explo-s:#FAF5E4; --explo-b:#E5D9A8;
+  --plain:#5B6B4A; --plain-s:#F1F4EC;
+  --stop:#9A4B3C; --stop-s:#FAEDE9;
+  --serif:ui-serif,Georgia,"Songti TC","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:66px}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);
+  font-size:16.5px;line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{width:min(100% - 32px,1180px);margin:0 auto}
+.prose{max-width:74ch}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;margin:0;color:var(--ink)}
+h1{font-size:clamp(27px,3.6vw,42px);line-height:1.18;letter-spacing:-.02em}
+h2{font-size:clamp(21px,2.4vw,27px);line-height:1.3}
+h3{font-size:19px;margin-top:34px}
+h4{font-size:16.5px;font-family:var(--sans);font-weight:700;margin-top:24px}
+p{margin:0 0 15px}
+.prose,.note,.warn,.plainbox,.exbox,.qcard,.verbatim,.howto,.sub,td,th{overflow-wrap:break-word}
+code,.mono,.stem,.opts,.psg{overflow-wrap:anywhere;word-break:break-word}
+a{color:var(--accent)}
+code,.mono{font-family:var(--mono);font-size:.86em}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0}
+
+/* ---- header ---- */
+header{background:var(--paper);border-bottom:1px solid var(--line);padding:46px 0 34px}
+.sub{font-size:16px;color:var(--ink2);max-width:70ch;margin-top:16px;line-height:1.75}
+.kv{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.kv div{background:var(--tint);border:1px solid var(--line);border-radius:4px;
+  padding:6px 11px;font-size:13.5px;color:var(--ink2)}
+.kv b{color:var(--ink);font-weight:700}
+
+/* ---- nav ---- */
+nav{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:2px;overflow-x:auto;padding:7px 0;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;font-size:13.5px;color:var(--ink2);text-decoration:none;
+  padding:5px 10px;border-radius:4px;white-space:nowrap}
+nav a:hover{background:var(--tint);color:var(--ink)}
+
+/* ---- sections ---- */
+section{padding:52px 0 8px;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.sechd{display:flex;align-items:baseline;gap:12px;margin-bottom:22px}
+.secno{font-family:var(--mono);font-size:12.5px;color:var(--accent);
+  border:1px solid var(--line2);border-radius:3px;padding:2px 7px;flex:0 0 auto}
+
+/* ---- 欄位顯示名 ---- */
+.fld{display:inline;font-family:var(--sans);font-size:.88em;font-weight:700;
+  color:var(--field);background:var(--field-s);border:1px solid #DCE5EE;
+  border-radius:3px;padding:1px 5px;margin-right:2px;white-space:nowrap}
+.pair{display:inline-block;margin:0 10px 6px 0;white-space:normal;max-width:100%}
+.pair .pv{overflow-wrap:anywhere}
+.pv{font-weight:600}
+.exbox{background:var(--paper);border:1px solid var(--line);border-radius:6px;
+  padding:16px 18px;margin:16px 0}
+.exbox .row{display:block;margin-bottom:5px;white-space:normal}
+
+/* ---- tables ---- */
+.tw{overflow-x:auto;margin:16px 0 4px;border:1px solid var(--line);border-radius:6px;
+  background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{background:var(--tint);font-weight:700;font-size:13.5px;color:var(--ink);
+  border-bottom:1.5px solid var(--line2);position:sticky;top:0}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:#FCFBF8}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;width:1%;white-space:nowrap}
+td.c,th.c{text-align:center;width:1%;white-space:nowrap}
+.tw.nw{display:inline-block;width:auto;max-width:100%;vertical-align:top}
+.tw.nw table{width:max-content;min-width:0;max-width:100%}
+.tw.nw td,.tw.nw th{padding-left:18px;padding-right:18px}
+table.sum tbody tr:last-child{background:var(--tint);font-weight:700}
+.dim{color:var(--ink3)}
+.big{font-weight:700}
+
+/* ---- 依據行 ---- */
+.basis{display:flex;flex-wrap:wrap;gap:4px 22px;font-size:12.5px;color:var(--ink3);
+  padding:9px 12px;background:var(--tint);border:1px solid var(--line);
+  border-top:0;border-radius:0 0 6px 6px;margin:-5px 0 20px;line-height:1.6}
+.basis b{color:var(--ink2);font-weight:700;margin-right:5px;font-size:12px}
+.basis span{max-width:100%}
+
+/* ---- blocks ---- */
+.note,.warn,.plainbox{border-radius:6px;padding:14px 16px;margin:18px 0;font-size:15px;line-height:1.75}
+.note{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--line2)}
+.warn{background:var(--stop-s);border:1px solid #EBD3CC;border-left:3px solid var(--stop)}
+.plainbox{background:var(--plain-s);border:1px solid #DCE3D3;border-left:3px solid var(--plain)}
+.note p:last-child,.warn p:last-child,.plainbox p:last-child{margin-bottom:0}
+
+/* 探索性衍生內容 */
+.explo{background:var(--explo-s);border:1px solid var(--explo-b);border-radius:6px;
+  padding:14px 16px 4px;margin:20px 0;position:relative}
+.explo-tag{display:inline-block;background:var(--explo);color:#fff;font-size:11.5px;
+  font-weight:700;letter-spacing:.04em;border-radius:3px;padding:2px 8px;margin-bottom:10px}
+.explo .tw,.explo .basis{background:var(--paper)}
+.explo .basis{background:#FDFBF2}
+
+/* 白話說明欄 */
+td.plain,th.plain{background:var(--plain-s);border-left:1px solid #DCE3D3}
+th.plain{color:var(--plain)}
+td.plain{color:var(--ink2);font-size:14px}
+
+/* ---- 例題 ---- */
+.qcard{background:var(--paper);border:1px solid var(--line);border-radius:8px;
+  padding:20px 22px;margin:22px 0}
+.qcard .qhd{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;
+  border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:14px}
+.qcard .qid{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:700}
+.stem{font-family:var(--mono);font-size:14px;background:var(--tint);border:1px solid var(--line);
+  border-radius:5px;padding:12px 14px;margin:12px 0;line-height:1.7;white-space:pre-wrap}
+.opts{list-style:none;padding:0;margin:10px 0 14px;font-family:var(--mono);font-size:13.5px}
+.opts li{padding:5px 10px;border-radius:4px;margin-bottom:3px}
+.opts li.ok{background:var(--accent-s);border:1px solid #EAD7C8;font-weight:700}
+.psg{font-size:13.5px;color:var(--ink2);background:var(--tint);border:1px solid var(--line);
+  border-radius:5px;padding:12px 14px;margin:12px 0;max-height:210px;overflow:auto;line-height:1.8}
+.verbatim{border-left:3px solid var(--accent);background:var(--accent-s);padding:12px 15px;
+  border-radius:0 5px 5px 0;margin:14px 0;font-size:14.5px;line-height:1.8}
+.verbatim .lab{display:block;font-size:12px;font-weight:700;color:var(--accent);
+  letter-spacing:.03em;margin-bottom:6px}
+
+/* ---- 查詢區 ---- */
+.tool{background:var(--paper);border:1px solid var(--line2);border-radius:10px;
+  padding:0;margin:24px 0;overflow:hidden}
+.tabs{display:flex;border-bottom:1px solid var(--line);background:var(--tint)}
+.tabs button{flex:1;background:none;border:0;border-bottom:2.5px solid transparent;
+  padding:13px 10px;font-family:var(--sans);font-size:15px;font-weight:700;
+  color:var(--ink3);cursor:pointer}
+.tabs button.on{color:var(--accent);border-bottom-color:var(--accent);background:var(--paper)}
+.panel{padding:18px 18px 20px;display:none}
+.panel.on{display:block}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px 16px;
+  padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.f label{display:block;font-size:12.5px;font-weight:700;color:var(--ink2);margin-bottom:5px}
+.f.wide{grid-column:1/-1;padding-bottom:4px;border-bottom:1px dashed var(--line);margin-bottom:2px}
+.f select,.f input{width:100%;font-family:var(--sans);font-size:14px;padding:7px 9px;
+  border:1px solid var(--line2);border-radius:5px;background:var(--paper);color:var(--ink)}
+.yrs{display:flex;flex-wrap:wrap;gap:4px}
+.yrs button{font-family:var(--mono);font-size:12.5px;padding:4px 8px;border:1px solid var(--line2);
+  background:var(--paper);border-radius:4px;cursor:pointer;color:var(--ink2)}
+.yrs button.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+.bar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;
+  font-size:13.5px;color:var(--ink2);margin-bottom:10px}
+.bar .cnt b{font-size:17px;color:var(--ink)}
+.bar button{font-size:13px;padding:5px 11px;border:1px solid var(--line2);background:var(--paper);
+  border-radius:5px;cursor:pointer;color:var(--ink2)}
+.qt{width:100%;border-collapse:collapse;font-size:14px}
+.qt th{background:var(--tint);font-size:12.5px;font-weight:700;padding:8px 9px;
+  border-bottom:1.5px solid var(--line2);text-align:left;white-space:nowrap;cursor:pointer;
+  position:sticky;top:0;z-index:2}
+.qt th.nosort{cursor:default}
+.qt th .ar{color:var(--accent);font-size:10px}
+.qt td{padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+.qt tbody tr.hd{cursor:pointer}
+.qt tbody tr.hd:hover{background:#FCFBF8}
+.qt td.r{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{max-height:560px;overflow:auto;border:1px solid var(--line);border-radius:6px}
+.det{background:#FCFBF8}
+.det td{padding:16px 18px}
+.dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;margin:0 0 12px}
+.dl dt{font-weight:700;color:var(--field);white-space:nowrap}
+.dl dd{margin:0}
+.empty{padding:28px;text-align:center;color:var(--ink3);font-size:14.5px}
+.tagf{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 7px;border-radius:3px;
+  background:var(--accent-s);color:var(--accent);border:1px solid #EAD7C8}
+.tagn{display:inline-block;font-size:11.5px;padding:1px 7px;border-radius:3px;
+  background:var(--tint);color:var(--ink3);border:1px solid var(--line)}
+.howto{font-size:14px;color:var(--ink2);background:var(--tint);border:1px solid var(--line);
+  border-radius:6px;padding:13px 16px;margin:0 0 16px}
+.howto ol{margin:8px 0 0;padding-left:22px}
+.howto li{margin-bottom:4px}
+
+footer{background:var(--paper);border-top:1px solid var(--line);margin-top:56px;
+  padding:30px 0 50px;font-size:13.5px;color:var(--ink3)}
+@media (max-width:640px){
+  body{font-size:16px}
+  .basis{gap:2px 14px}
+  .kv div{font-size:12.5px}
+  th,td{padding:8px 9px}
+}
+@media print{nav,.tool{display:none}}
+
+.lead{background:var(--paper);border:1px solid var(--line2);border-radius:8px;
+  padding:6px 4px;margin:6px 0 30px}
+.lead ol{margin:0;padding:0 20px 0 42px;list-style:decimal}
+.lead li{padding:12px 0;border-top:1px solid var(--line);font-size:16.5px;line-height:1.75}
+.lead li:first-child{border-top:0}
+.lead b{font-weight:700}
+.lead a{color:var(--accent);text-decoration:none;font-size:13px;white-space:nowrap}
+.ex{margin:30px 0 34px}
+.ex-t{font-family:var(--serif);font-size:19.5px;font-weight:600;line-height:1.4;
+  margin:0 0 4px;display:flex;gap:10px;align-items:baseline}
+.ex-n{font-family:var(--mono);font-size:11.5px;font-weight:700;color:#fff;
+  background:var(--accent);border-radius:3px;padding:3px 8px;flex:0 0 auto}
+.so{font-size:15.5px;line-height:1.8;background:var(--accent-s);border:1px solid #EAD7C8;
+  border-left:3px solid var(--accent);border-radius:0 6px 6px 0;padding:11px 15px;margin:12px 0 0}
+.so b{font-weight:700}
+.src{font-size:12.5px;color:var(--ink3);margin:6px 0 0;line-height:1.6}
+/* 欄數多的表：讓欄寬依內容決定，容器橫向捲動，避免欄位被壓成一字一行 */
+.tw table{width:max-content;min-width:100%}
+.tw th{white-space:nowrap}
+.tw td{white-space:normal;max-width:210px}
+.tw td.r,.tw th.r,.tw td.c,.tw th.c{white-space:nowrap}
+
+.chart{background:var(--paper);border:1px solid var(--line);border-radius:6px;
+  padding:14px 16px;margin:14px 0 0;overflow-x:auto}
+.chart svg{display:block;max-width:100%;height:auto}
+.axis{font-size:12.5px;color:var(--ink2);margin-top:10px;padding-top:8px;
+  border-top:1px solid var(--line);text-align:center;line-height:1.6}
+.axis b{color:var(--ink);font-weight:700}
+.defs{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14.5px;
+  margin:14px 0 0;background:var(--tint);border:1px solid var(--line);
+  border-radius:6px;padding:12px 15px}
+.defs dt{font-weight:700;white-space:nowrap}
+.defs dd{margin:0;color:var(--ink2)}
+.step{margin:14px 0 0}
+.step .it{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.step .it:first-child{border-top:0}
+.step .nm{font-family:var(--mono);font-size:12px;color:var(--accent);flex:0 0 70px;padding-top:3px}
+.step .bd{flex:1 1 auto;font-size:15px;line-height:1.75}
+.step .who{font-size:12.5px;color:var(--ink3);margin-top:2px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>105–115 年會考英文試題中的文法</h1>
+<div class="kv"><div>年度 <b>105–115</b></div><div>題目 <b>461</b></div><div>文法出現紀錄 <b>2,922</b></div><div>文法類別 <b>78</b></div><div>產生日期 <b>2026-09-18</b></div></div>
+</div></header>
+<nav><div class="wrap">
+<a href="#key">結論</a>
+<a href="#charts">數字與圖表</a>
+<a href="#state">完整度</a>
+<a href="#next">下一步</a>
+<a href="#apx">附錄</a>
+</div></nav>
+<main>
+<section id="key"><div class="wrap">
+<div class="sechd"><span class="secno">結論</span><h2>六件事</h2></div>
+<div class="lead"><ol>
+<li>461 題裡有 <b>245</b> 題作答要判斷文法。閱讀題 234 題裡有 <b>119</b> 題（50.9%）——閱讀題不是只考閱讀。逐年在 16–27 題之間。<a href="#x1">→ 圖表 1、2</a></li>
+<li>兩個大題要判斷的文法不同：第一大題 109 題裡 <b>65</b> 題是文法形式辨識；第二大題 136 題裡 <b>75</b> 題是語意關係理解，文法形式辨識只有 14 題。<a href="#x3">→ 圖表 3</a></li>
+<li>文法出現次數與目前已確認的作答作用題數不是同一種統計：<b>由 that 引導的名詞子句</b>出現在 43 篇文章、11 個年度都有，目前已確認的作答作用題數是 <b>0</b>；<b>規則動詞與不規則動詞的過去式</b>只出現在 5 篇文章，目前已確認 <b>8</b> 題。<a href="#x4">→ 圖表 4、5</a></li>
+<li>目前已確認主要文法歸屬的 146 題（245 題中的一部分，其餘見「完整度」）落在 <b>41</b> 個類別，最常見的 12 個占 61.0%；大類看是子句 38 題、時式 32 題、形容詞 18 題，而 冠詞、分詞、副詞、名詞、指示詞 這 5 個大類目前是 0 題。<a href="#x6">→ 圖表 6、8</a></li>
+<li><b>14</b> 個類別在 5 個以上年度都有目前已確認的作答作用紀錄（合計 99 題），另有 16 個只出現過一個年度。這是「在多個年度都出現過」的清單，不是教學順序。<a href="#x7">→ 圖表 7</a></li>
+</ol></div>
+</div></section>
+<section id="charts"><div class="wrap">
+<div class="sechd"><span class="secno">圖表</span><h2>數字與圖表</h2></div>
+<div class="ex" id="x1"><h3 class="ex-t"><span class="ex-n">圖表 1</span><span>461 題裡有 245 題，作答要判斷文法；閱讀題占其中 119 題</span></h3><div class="chart"><svg viewBox="0 0 880 135" role="img"><g font-size="12" fill="#77766F"><rect x="250" y="2" width="11" height="11" fill="var(--accent)"/><text x="266" y="12">作答要判斷文法的題數</text><rect x="432" y="2" width="11" height="11" fill="#C9C3B4"/><text x="448" y="12">該題型的總題數</text></g><rect x="250" y="26" width="248.9" height="26" fill="#C9C3B4"/><rect x="250" y="30" width="7.2" height="18" fill="var(--accent)"/><text x="505.9" y="44" font-size="13" fill="#43433F">104</text><text x="262.2" y="43" font-size="13" font-weight="700" fill="var(--accent)">3</text><text x="240" y="44" font-size="13.5" fill="#191917" text-anchor="end">單字</text><rect x="250" y="61" width="294.4" height="26" fill="#C9C3B4"/><rect x="250" y="65" width="294.4" height="18" fill="var(--accent)"/><text x="551.4" y="79" font-size="13" fill="#43433F">123</text><text x="538.4" y="79" font-size="13" font-weight="700" fill="#fff" text-anchor="end">123</text><text x="240" y="79" font-size="13.5" fill="#191917" text-anchor="end">文法</text><rect x="250" y="96" width="560.0" height="26" fill="#C9C3B4"/><rect x="250" y="100" width="284.8" height="18" fill="var(--accent)"/><text x="817.0" y="114" font-size="13" fill="#43433F">234</text><text x="528.8" y="114" font-size="13" font-weight="700" fill="#fff" text-anchor="end">119</text><text x="240" y="114" font-size="13.5" fill="#191917" text-anchor="end">閱讀</text></svg><div class="axis">橫軸：<b>題數</b>｜母體：461 題（105–115 共 11 個年度）</div></div><div class="tw"><table class="sum"><thead><tr><th>題型</th><th class="r">題數</th><th class="r">作答要判斷文法</th></tr></thead><tbody><tr><td>單字</td><td class="r">104</td><td class="r"><b>3</b>（2.9%）</td></tr><tr><td>文法</td><td class="r">123</td><td class="r"><b>123</b>（100.0%）</td></tr><tr><td>閱讀</td><td class="r">234</td><td class="r"><b>119</b>（50.9%）</td></tr><tr><td><b>合計</b></td><td class="r"><b>461</b></td><td class="r"><b>245</b>（53.1%）</td></tr></tbody></table></div><dl class="defs"><dt>題型</dt><dd>研究者 2026-09-15 核准的題目分組，不是官方試卷的分區。</dd><dt>單字題</dt><dd>四個選項的文法形式一致，差別只在用哪一個字。</dd><dt>文法題</dt><dd>選項是同一個字的不同形式，或需要判斷句子怎麼組起來。</dd><dt>閱讀題</dt><dd>需要先讀懂文章才能作答，選項講的是文章內容。</dd><dt>作答要判斷文法</dt><dd>該題的文法作用判定落在四個有作用的類別（文法形式辨識、語意關係理解、句構理解、語用功能理解）；另外 48 題文法只是出現在題目裡沒有參與作答，168 題完全不涉及。</dd></dl><p class="src">依據：題目紀錄的題型欄與文法作用欄｜母體：461 筆題目紀錄</p><div class="so"><b>小結</b>　閱讀練習如果只練找訊息和推論，會漏掉 <b>119</b> 題實際要判斷文法的題目——占全部閱讀題的 50.9%。</div></div>
+<div class="ex" id="x2"><h3 class="ex-t"><span class="ex-n">圖表 2</span><span>逐年看：作答要判斷文法的題數在 16–27 題之間</span></h3><div class="tw"><table class="sum"><thead><tr><th>年度</th><th class="r">題數</th><th class="r">作答要判斷文法</th><th class="r">占該年</th></tr></thead><tbody><tr><td>105</td><td class="r">41</td><td class="r"><b>27</b></td><td class="r">65.9%</td></tr><tr><td>106</td><td class="r">41</td><td class="r"><b>16</b></td><td class="r">39.0%</td></tr><tr><td>107</td><td class="r">41</td><td class="r"><b>23</b></td><td class="r">56.1%</td></tr><tr><td>108</td><td class="r">41</td><td class="r"><b>22</b></td><td class="r">53.7%</td></tr><tr><td>109</td><td class="r">41</td><td class="r"><b>21</b></td><td class="r">51.2%</td></tr><tr><td>110</td><td class="r">41</td><td class="r"><b>24</b></td><td class="r">58.5%</td></tr><tr><td>111</td><td class="r">43</td><td class="r"><b>25</b></td><td class="r">58.1%</td></tr><tr><td>112</td><td class="r">43</td><td class="r"><b>21</b></td><td class="r">48.8%</td></tr><tr><td>113</td><td class="r">43</td><td class="r"><b>27</b></td><td class="r">62.8%</td></tr><tr><td>114</td><td class="r">43</td><td class="r"><b>20</b></td><td class="r">46.5%</td></tr><tr><td>115</td><td class="r">43</td><td class="r"><b>19</b></td><td class="r">44.2%</td></tr><tr><td><b>合計</b></td><td class="r"><b>461</b></td><td class="r"><b>245</b></td><td class="r">53.1%</td></tr></tbody></table></div><p class="src">依據：題目紀錄的年度欄與文法作用欄｜母體：461 筆題目紀錄</p><div class="so"><b>小結</b>　後面每一張圖表都是<b>這 11 年合起來</b>的數字。逐年的占比在 39.0% 到 65.9% 之間（合計 53.1%），所以累積數字<b>不能讀成「每年都這樣」</b>。</div></div>
+<div class="ex" id="x3"><h3 class="ex-t"><span class="ex-n">圖表 3</span><span>兩個大題要判斷的文法不是同一種</span></h3><div class="chart"><svg viewBox="0 0 880 148" role="img"><text x="100" y="28" font-size="13.5" font-weight="700" fill="#191917" text-anchor="end">第一大題</text><rect x="110.0" y="4" width="447.2" height="34" fill="#8A5A3B"/><text x="333.6" y="22" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">65 題</text><text x="333.6" y="35" font-size="11.5" fill="#fff" text-anchor="middle">60%</text><rect x="557.2" y="4" width="268.3" height="34" fill="#B08968"/><text x="691.4" y="22" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">39 題</text><text x="691.4" y="35" font-size="11.5" fill="#fff" text-anchor="middle">36%</text><rect x="825.6" y="4" width="34.4" height="34" fill="#C9B79C"/><text x="333.6" y="56" font-size="12" fill="#43433F" text-anchor="middle">文法形式辨識</text><text x="691.4" y="56" font-size="12" fill="#43433F" text-anchor="middle">語意關係理解</text><text x="100" y="98" font-size="13.5" font-weight="700" fill="#191917" text-anchor="end">第二大題</text><rect x="110.0" y="74" width="77.2" height="34" fill="#8A5A3B"/><text x="148.6" y="92" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">14 題</text><text x="148.6" y="105" font-size="11.5" fill="#fff" text-anchor="middle">10%</text><rect x="187.2" y="74" width="413.6" height="34" fill="#B08968"/><text x="394.0" y="92" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">75 題</text><text x="394.0" y="105" font-size="11.5" fill="#fff" text-anchor="middle">55%</text><rect x="600.8" y="74" width="110.3" height="34" fill="#C9B79C"/><text x="656.0" y="92" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">20 題</text><text x="656.0" y="105" font-size="11.5" fill="#fff" text-anchor="middle">15%</text><rect x="711.1" y="74" width="148.9" height="34" fill="#E0D6C4"/><text x="785.6" y="92" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">27 題</text><text x="785.6" y="105" font-size="11.5" fill="#fff" text-anchor="middle">20%</text><text x="148.6" y="126" font-size="12" fill="#43433F" text-anchor="middle">文法形式辨識</text><text x="394.0" y="126" font-size="12" fill="#43433F" text-anchor="middle">語意關係理解</text><text x="656.0" y="126" font-size="12" fill="#43433F" text-anchor="middle">句構理解</text><text x="785.6" y="126" font-size="12" fill="#43433F" text-anchor="middle">語用功能理解</text></svg><div class="axis">每一條＝該大題<b>作答要判斷文法的題目</b>（第一大題 109 題、第二大題 136 題），依文法作用的四個值切分；橫軸為各值占該大題的比例</div></div><div class="tw"><table><thead><tr><th>大題</th><th class="r">題數</th><th class="r">作答要判斷文法</th><th class="r">文法形式辨識</th><th class="r">語意關係理解</th><th class="r">句構理解</th><th class="r">語用功能理解</th></tr></thead><tbody><tr><td>第一大題</td><td class="r">191</td><td class="r"><b>109</b>（57.1%）</td><td class="r">65</td><td class="r">39</td><td class="r">5</td><td class="r">0</td></tr><tr><td>第二大題</td><td class="r">270</td><td class="r"><b>136</b>（50.4%）</td><td class="r">14</td><td class="r">75</td><td class="r">20</td><td class="r">27</td></tr></tbody></table></div><p class="src">依據：題目紀錄的大題欄與文法作用欄｜母體：245 題作答要判斷文法的題目</p><div class="so"><b>小結</b>　第一大題可以用單句的形式練習（109 題裡 65 題是文法形式辨識）；第二大題必須放在語境裡（136 題裡 75 題是語意關係、27 題是語用功能），形式練習只對得上 14 題。<b>同一種練習題型不能同時用在兩個大題上。</b></div></div>
+<div class="ex" id="x4"><h3 class="ex-t"><span class="ex-n">圖表 4</span><span>一個文法出現得多，不代表作答時要判斷它</span></h3><div class="chart"><svg viewBox="0 0 880 430" role="img"><line x1="62" y1="378" x2="760" y2="378" stroke="#D2CDC0"/><line x1="62" y1="16" x2="62" y2="378" stroke="#D2CDC0"/><line x1="62.0" y1="16" x2="62.0" y2="378" stroke="#EFECE4"/><text x="62.0" y="396" font-size="12" fill="#77766F" text-anchor="middle">0</text><line x1="191.3" y1="16" x2="191.3" y2="378" stroke="#EFECE4"/><text x="191.3" y="396" font-size="12" fill="#77766F" text-anchor="middle">10</text><line x1="320.5" y1="16" x2="320.5" y2="378" stroke="#EFECE4"/><text x="320.5" y="396" font-size="12" fill="#77766F" text-anchor="middle">20</text><line x1="449.8" y1="16" x2="449.8" y2="378" stroke="#EFECE4"/><text x="449.8" y="396" font-size="12" fill="#77766F" text-anchor="middle">30</text><line x1="579.0" y1="16" x2="579.0" y2="378" stroke="#EFECE4"/><text x="579.0" y="396" font-size="12" fill="#77766F" text-anchor="middle">40</text><line x1="708.3" y1="16" x2="708.3" y2="378" stroke="#EFECE4"/><text x="708.3" y="396" font-size="12" fill="#77766F" text-anchor="middle">50</text><line x1="62" y1="378.0" x2="760" y2="378.0" stroke="#EFECE4"/><text x="54" y="382.0" font-size="12" fill="#77766F" text-anchor="end">0</text><line x1="62" y1="322.3" x2="760" y2="322.3" stroke="#EFECE4"/><text x="54" y="326.3" font-size="12" fill="#77766F" text-anchor="end">2</text><line x1="62" y1="266.6" x2="760" y2="266.6" stroke="#EFECE4"/><text x="54" y="270.6" font-size="12" fill="#77766F" text-anchor="end">4</text><line x1="62" y1="210.9" x2="760" y2="210.9" stroke="#EFECE4"/><text x="54" y="214.9" font-size="12" fill="#77766F" text-anchor="end">6</text><line x1="62" y1="155.2" x2="760" y2="155.2" stroke="#EFECE4"/><text x="54" y="159.2" font-size="12" fill="#77766F" text-anchor="end">8</text><line x1="62" y1="99.5" x2="760" y2="99.5" stroke="#EFECE4"/><text x="54" y="103.5" font-size="12" fill="#77766F" text-anchor="end">10</text><line x1="62" y1="43.8" x2="760" y2="43.8" stroke="#EFECE4"/><text x="54" y="47.8" font-size="12" fill="#77766F" text-anchor="end">12</text><circle cx="74.9" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="322.3" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="87.9" cy="294.5" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="126.6" cy="322.3" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="126.6" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="113.7" cy="322.3" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="113.7" cy="322.3" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="165.4" cy="238.8" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="540.3" cy="16.0" r="6" fill="#8A5A3B" fill-opacity="0.9" stroke="#8A5A3B"/><circle cx="255.9" cy="238.8" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="113.7" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="100.8" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="385.1" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="152.5" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="178.3" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="100.8" cy="322.3" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="87.9" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="217.1" cy="322.3" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="333.4" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="243.0" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="100.8" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="294.5" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="113.7" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="100.8" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="126.6" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="87.9" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="126.6" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="217.1" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="100.8" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="385.1" cy="238.8" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="307.6" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="656.6" cy="183.1" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="100.8" cy="322.3" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="191.3" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="139.6" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="126.6" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="126.6" cy="294.5" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="178.3" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="320.5" cy="210.9" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="553.2" cy="210.9" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="74.9" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="126.6" cy="155.2" r="6" fill="#8A5A3B" fill-opacity="0.9" stroke="#8A5A3B"/><circle cx="178.3" cy="183.1" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="320.5" cy="266.6" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="178.3" cy="294.5" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="617.8" cy="378.0" r="6" fill="#8A5A3B" fill-opacity="0.9" stroke="#8A5A3B"/><circle cx="527.3" cy="155.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="540.3" cy="210.9" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="333.4" cy="322.3" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="449.8" cy="43.8" r="6" fill="#8A5A3B" fill-opacity="0.9" stroke="#8A5A3B"/><circle cx="760.0" cy="210.9" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="126.6" cy="350.2" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="87.9" cy="378.0" r="4" fill="#B7AE9C" fill-opacity="0.55" stroke="none"/><circle cx="87.9" cy="238.8" r="6" fill="#8A5A3B" fill-opacity="0.9" stroke="#8A5A3B"/><text x="550.3" y="20.0" font-size="12.5" font-weight="700" fill="#8A5A3B" text-anchor="start">形容詞的比較級</text><text x="136.6" y="159.2" font-size="12.5" font-weight="700" fill="#8A5A3B" text-anchor="start">規則動詞與不規則動詞的過去式</text><text x="607.8" y="382.0" font-size="12.5" font-weight="700" fill="#8A5A3B" text-anchor="end">由 that 引導的名詞子句</text><text x="459.8" y="47.8" font-size="12.5" font-weight="700" fill="#8A5A3B" text-anchor="start">條件子句 if（不含假設語氣）</text><text x="97.9" y="242.8" font-size="12.5" font-weight="700" fill="#8A5A3B" text-anchor="start">人 + used to + VP</text><text x="411.0" y="422" font-size="13" fill="#43433F" text-anchor="middle">橫軸：出現在幾篇文章</text><text x="14" y="197.0" font-size="13" fill="#43433F" transform="rotate(-90 14 197.0)" text-anchor="middle">縱軸：目前已確認的作答作用題數</text></svg><div class="axis">一個點＝一個文法類別｜母體：61 個有登錄在文章上的紀錄的類別</div></div><p class="src">每個點是一個文法類別，共 61 個（另 17 個目前沒有登錄在文章上的紀錄，不在圖上）。標名字的是位置最極端的五個。</p><dl class="defs"><dt>出現在幾篇文章</dt><dd><b>不同文章數。</b>只看登錄在題組文章上的紀錄，依「年度＋文章」去重；同一篇文章裡出現幾次都只算一篇。不含題幹與選項的紀錄。</dd><dt>總共出現幾次</dt><dd><b>逐筆計數。</b>一筆＝這個文法形式在一篇文章、一道題的題幹或一個選項裡出現一次；同一篇文章裡出現三次就記三筆。含題幹與選項。</dd><dt>兩欄的關係</dt><dd>母體相同（1,799 筆已確認的紀錄），但切法不同，<b>不可相加</b>，也不能相除當成「平均每篇幾次」——分母只涵蓋文章，分子含題幹與選項。例：that 名詞子句 81 次＝文章 58 ＋題幹 9 ＋選項 14，其中文章那 58 筆散在 43 篇不同文章裡。</dd><dt>兩欄都是下限</dt><dd>只算已確認的紀錄，不含未歸入類別的 1,123 筆，裁定或擴充類別後只會往上加。</dd></dl><p class="src">依據：文法類別統計的出現篇數欄與逐題的主要文法欄｜母體：61 個有文章層紀錄的文法類別</p><div class="so"><b>小結</b>　選題與教材編排<b>不能用「這個文法常出現」當依據</b>。圖右下角的文法到處都在、但作答用不到；左上角的很少出現、卻反覆被用來作答。</div></div>
+<div class="ex" id="x5"><h3 class="ex-t"><span class="ex-n">圖表 5</span><span>這些文法常出現在試題文字裡，但目前確認到的作答題數是 0</span></h3><div class="tw"><table><thead><tr><th>文法</th><th class="r">出現在幾篇文章</th><th class="r">總共出現幾次</th><th class="r">出現在幾個年度</th><th class="r">目前已確認的作答作用題數</th></tr></thead><tbody><tr><td>由 that 引導的名詞子句 <span class="dim mono">G069</span></td><td class="r">43</td><td class="r">81</td><td class="r">11</td><td class="r"><b>0</b></td></tr><tr><td>wh-不定詞片語 <span class="dim mono">G027</span></td><td class="r">7</td><td class="r">22</td><td class="r">10</td><td class="r"><b>0</b></td></tr><tr><td>情態助動詞 should <span class="dim mono">G056</span></td><td class="r">6</td><td class="r">19</td><td class="r">10</td><td class="r"><b>0</b></td></tr><tr><td>指示詞 this, that <span class="dim mono">G012</span></td><td class="r">5</td><td class="r">10</td><td class="r">5</td><td class="r"><b>0</b></td></tr><tr><td>修飾用的介系詞片語 <span class="dim mono">G040</span></td><td class="r">5</td><td class="r">6</td><td class="r">5</td><td class="r"><b>0</b></td></tr><tr><td>以 do/does/did 及其他助動詞引導的 Yes/No 問句 <span class="dim mono">G044</span></td><td class="r">5</td><td class="r">9</td><td class="r">7</td><td class="r"><b>0</b></td></tr><tr><td>連綴動詞 become/get/look <span class="dim mono">G057</span></td><td class="r">5</td><td class="r">6</td><td class="r">4</td><td class="r"><b>0</b></td></tr><tr><td>頻率副詞 always, usually <span class="dim mono">G022</span></td><td class="r">4</td><td class="r">5</td><td class="r">2</td><td class="r"><b>0</b></td></tr></tbody></table></div><p class="src">依據：文法類別統計的出現三欄與目前已確認的主要作答作用題數｜母體：21 個有登錄在文章上的紀錄、目前已確認作答作用題數為 0 的類別（表列前 8 個）｜「出現在幾篇文章」與「總共出現幾次」的定義見圖表 4 下方</p><div class="tw"><table><thead><tr><th>反方向：出現較少、但目前已確認的作答作用題數較多的類別</th><th class="r">出現在幾篇文章</th><th class="r">目前已確認的作答作用題數</th><th class="r">出現在幾個年度</th></tr></thead><tbody><tr><td>規則動詞與不規則動詞的過去式 <span class="dim mono">G065</span></td><td class="r">5</td><td class="r"><b>8</b></td><td class="r">8</td></tr><tr><td>人 + used to + VP <span class="dim mono">G077</span></td><td class="r">2</td><td class="r"><b>5</b></td><td class="r">5</td></tr><tr><td>所有格代名詞 mine/yours <span class="dim mono">G008</span></td><td class="r">2</td><td class="r"><b>3</b></td><td class="r">3</td></tr><tr><td>and 與 but 的用法 <span class="dim mono">G036</span></td><td class="r">1</td><td class="r"><b>3</b></td><td class="r">3</td></tr><tr><td>感官動詞 + 原形動詞 <span class="dim mono">G058</span></td><td class="r">5</td><td class="r"><b>3</b></td><td class="r">3</td></tr></tbody></table></div><div class="so"><b>小結</b>　文法出現次數與目前已確認的作答作用題數<b>不是同一種統計</b>：出現較多，不代表目前已確認的作答作用題數也較多。表上的 0 是<b>目前已確認紀錄中</b>的值，<b>不能讀成這些文法在 11 年所有題目中都沒有作答作用</b>。</div></div>
+<div class="ex" id="x6"><h3 class="ex-t"><span class="ex-n">圖表 6</span><span>作答要判斷的文法：目前確認到題數最多的 12 個</span></h3><div class="chart"><svg viewBox="0 0 880 426" role="img"><rect x="250" y="0" width="560.0" height="26" fill="var(--accent)"/><text x="817.0" y="18" font-size="13" fill="#43433F">13 題</text><text x="240" y="18" font-size="13.5" fill="#191917" text-anchor="end">形容詞的比較級</text><rect x="250" y="35" width="516.9" height="26" fill="var(--accent)"/><text x="773.9" y="53" font-size="13" fill="#43433F">12 題</text><text x="240" y="53" font-size="13.5" fill="#191917" text-anchor="end">條件子句 if（不含假設語氣）</text><rect x="250" y="70" width="344.6" height="26" fill="var(--accent)"/><text x="601.6" y="88" font-size="13" fill="#43433F">8 題</text><text x="240" y="88" font-size="13.5" fill="#191917" text-anchor="end">規則動詞與不規則動詞的過去式</text><rect x="250" y="105" width="344.6" height="26" fill="var(--accent)"/><text x="601.6" y="123" font-size="13" fill="#43433F">8 題</text><text x="240" y="123" font-size="13.5" fill="#191917" text-anchor="end">wh-名詞子句</text><rect x="250" y="140" width="301.5" height="26" fill="var(--accent)"/><text x="558.5" y="158" font-size="13" fill="#43433F">7 題</text><text x="240" y="158" font-size="13.5" fill="#191917" text-anchor="end">被動句</text><rect x="250" y="175" width="301.5" height="26" fill="var(--accent)"/><text x="558.5" y="193" font-size="13" fill="#43433F">7 題</text><text x="240" y="193" font-size="13.5" fill="#191917" text-anchor="end">Be 動詞的過去進行式</text><rect x="250" y="210" width="258.5" height="26" fill="var(--accent)"/><text x="515.5" y="228" font-size="13" fill="#43433F">6 題</text><text x="240" y="228" font-size="13.5" fill="#191917" text-anchor="end">現在進行式：直述／否定／疑問及答句</text><rect x="250" y="245" width="258.5" height="26" fill="var(--accent)"/><text x="515.5" y="263" font-size="13" fill="#43433F">6 題</text><text x="240" y="263" font-size="13.5" fill="#191917" text-anchor="end">現在完成式：直述／否定／疑問及答句</text><rect x="250" y="280" width="258.5" height="26" fill="var(--accent)"/><text x="515.5" y="298" font-size="13" fill="#43433F">6 題</text><text x="240" y="298" font-size="13.5" fill="#191917" text-anchor="end">時間子句 before/when/after</text><rect x="250" y="315" width="258.5" height="26" fill="var(--accent)"/><text x="515.5" y="333" font-size="13" fill="#43433F">6 題</text><text x="240" y="333" font-size="13.5" fill="#191917" text-anchor="end">關係子句：關係代名詞</text><rect x="250" y="350" width="215.4" height="26" fill="var(--accent)"/><text x="472.4" y="368" font-size="13" fill="#43433F">5 題</text><text x="240" y="368" font-size="13.5" fill="#191917" text-anchor="end">數量詞 one, both, some, most, all…of, a lot of, lots of</text><rect x="250" y="385" width="215.4" height="26" fill="var(--accent)"/><text x="472.4" y="403" font-size="13" fill="#43433F">5 題</text><text x="240" y="403" font-size="13.5" fill="#191917" text-anchor="end">形容詞的最高級</text></svg><div class="axis">橫軸：<b>目前已確認的作答作用題數</b>｜母體：146 題主要文法歸屬已確認的題目</div></div><div class="tw"><table><thead><tr><th>文法</th><th>課綱大類</th><th class="c">課綱條目表的建議學習年級</th><th class="r">目前已確認的作答作用題數</th><th class="r">出現在幾個年度</th></tr></thead><tbody><tr><td>形容詞的比較級 <span class="dim mono">G018</span></td><td>形容詞</td><td class="c">8下</td><td class="r"><b>13</b></td><td class="r">8</td></tr><tr><td>條件子句 if（不含假設語氣） <span class="dim mono">G073</span></td><td>子句</td><td class="c">8下</td><td class="r"><b>12</b></td><td class="r">6</td></tr><tr><td>規則動詞與不規則動詞的過去式 <span class="dim mono">G065</span></td><td>時式</td><td class="c">7下</td><td class="r"><b>8</b></td><td class="r">8</td></tr><tr><td>wh-名詞子句 <span class="dim mono">G070</span></td><td>子句</td><td class="c">9上</td><td class="r"><b>8</b></td><td class="r">5</td></tr><tr><td>被動句 <span class="dim mono">G053</span></td><td>句子的分類</td><td class="c">9上</td><td class="r"><b>7</b></td><td class="r">6</td></tr><tr><td>Be 動詞的過去進行式 <span class="dim mono">G066</span></td><td>時式</td><td class="c">8上</td><td class="r"><b>7</b></td><td class="r">6</td></tr><tr><td>現在進行式：直述／否定／疑問及答句 <span class="dim mono">G062</span></td><td>時式</td><td class="c">7上</td><td class="r"><b>6</b></td><td class="r">6</td></tr><tr><td>現在完成式：直述／否定／疑問及答句 <span class="dim mono">G063</span></td><td>時式</td><td class="c">9上</td><td class="r"><b>6</b></td><td class="r">6</td></tr><tr><td>時間子句 before/when/after <span class="dim mono">G071</span></td><td>子句</td><td class="c">8上</td><td class="r"><b>6</b></td><td class="r">5</td></tr><tr><td>關係子句：關係代名詞 <span class="dim mono">G074</span></td><td>子句</td><td class="c">9上</td><td class="r"><b>6</b></td><td class="r">6</td></tr><tr><td>數量詞 one, both, some, most, all…of, a lot of, lots of <span class="dim mono">G017</span></td><td>數量詞</td><td class="c">8下</td><td class="r"><b>5</b></td><td class="r">5</td></tr><tr><td>形容詞的最高級 <span class="dim mono">G019</span></td><td>形容詞</td><td class="c">8下</td><td class="r"><b>5</b></td><td class="r">5</td></tr></tbody></table></div><dl class="defs"><dt>本表的母體</dt><dd>245 題目前被判定作答要判斷文法，其中 <b>146 題</b>的主要文法歸屬已確認，本表算的是這 146 題。另外 40 題的歸屬尚未確認、59 題現有 78 個類別沒有適合對應，都不在本表內（見「完整度」）。</dd><dt>這 146 題用到幾個文法</dt><dd>共 <b>41</b> 個文法類別。表上這 12 個覆蓋 89 題（61.0%）；其餘 29 個類別合計 57 題。</dd></dl><p class="src">依據：逐題的主要文法欄與文法類別總表的課綱欄｜母體：146 題主要文法歸屬已確認的題目｜「建議學習年級」是課綱條目表的既有欄位，不是本報告提出的課程年級建議</p><div class="so"><b>小結</b>　這 12 個類別合計 89 題，占本表母體 146 題的 61.0%。<b>這是目前確認數值較高的類別清單，可作為後續研究者檢視的高數值清單；不等於教學優先順序，也不代表應先編寫這些內容。</b></div></div>
+<div class="ex" id="x7"><h3 class="ex-t"><span class="ex-n">圖表 7</span><span>11 年裡有 5 年以上都用到的文法（14 個）</span></h3><div class="tw"><table><thead><tr><th>文法</th><th class="c">課綱條目表的建議學習年級</th><th class="r">目前已確認的作答作用題數</th><th class="r">出現在幾個年度</th><th>翰林iE 文法焦點</th><th>康軒 文法要點</th></tr></thead><tbody><tr><td>形容詞的比較級 <span class="dim mono">G018</span></td><td class="c">8下</td><td class="r"><b>13</b></td><td class="r">8</td><td>形容詞比較級</td><td>形容詞的比較級</td></tr><tr><td>條件子句 if（不含假設語氣） <span class="dim mono">G073</span></td><td class="c">8下</td><td class="r"><b>12</b></td><td class="r">6</td><td>從屬連接詞if</td><td>從屬連接詞：if, although</td></tr><tr><td>規則動詞與不規則動詞的過去式 <span class="dim mono">G065</span></td><td class="c">7下</td><td class="r"><b>8</b></td><td class="r">8</td><td>規則動詞過去式 | 不規則動詞過去式</td><td>過去簡單式（be 動詞、規則動詞） | 過去簡單式（不規則動詞）</td></tr><tr><td>wh-名詞子句 <span class="dim mono">G070</span></td><td class="c">9上</td><td class="r"><b>8</b></td><td class="r">5</td><td>wh-名詞子句</td><td>wh- 引導的名詞子句</td></tr><tr><td>被動句 <span class="dim mono">G053</span></td><td class="c">9上</td><td class="r"><b>7</b></td><td class="r">6</td><td>被動語態</td><td>被動語態</td></tr><tr><td>Be 動詞的過去進行式 <span class="dim mono">G066</span></td><td class="c">8上</td><td class="r"><b>7</b></td><td class="r">6</td><td>過去進行式</td><td>過去進行式</td></tr><tr><td>現在進行式：直述／否定／疑問及答句 <span class="dim mono">G062</span></td><td class="c">7上</td><td class="r"><b>6</b></td><td class="r">6</td><td>現在進行式</td><td>現在進行式</td></tr><tr><td>現在完成式：直述／否定／疑問及答句 <span class="dim mono">G063</span></td><td class="c">9上</td><td class="r"><b>6</b></td><td class="r">6</td><td>現在完成式</td><td>現在完成式</td></tr><tr><td>時間子句 before/when/after <span class="dim mono">G071</span></td><td class="c">8上</td><td class="r"><b>6</b></td><td class="r">5</td><td>從屬連接詞：after、before、when</td><td>從屬連接詞： when、before、after</td></tr><tr><td>關係子句：關係代名詞 <span class="dim mono">G074</span></td><td class="c">9上</td><td class="r"><b>6</b></td><td class="r">6</td><td>關係子句（關係代名詞當關係子句的主詞） | 關係子句（關係代名詞當關係子句的受詞） | 所有格關係代名詞whose</td><td>關係子句（關係代名詞當關係子句的主詞） | 關係子句（關係代名詞當關係子句動詞的受詞） | 關係代名詞所有格whose</td></tr><tr><td>數量詞 one, both, some, most, all…of, a lot of, lots of <span class="dim mono">G017</span></td><td class="c">8下</td><td class="r"><b>5</b></td><td class="r">5</td><td>數量不定代名詞</td><td>不定代名詞</td></tr><tr><td>形容詞的最高級 <span class="dim mono">G019</span></td><td class="c">8下</td><td class="r"><b>5</b></td><td class="r">5</td><td>形容詞最高級</td><td>形容詞最高級</td></tr><tr><td>祈使句的基本句型 <span class="dim mono">G050</span></td><td class="c">7上</td><td class="r"><b>5</b></td><td class="r">5</td><td>祈使句的用法</td><td>祈使句</td></tr><tr><td>人 + used to + VP <span class="dim mono">G077</span></td><td class="c">8下</td><td class="r"><b>5</b></td><td class="r">5</td><td>—</td><td>＊ used to ＋原形動詞</td></tr></tbody></table></div><p class="src">依據：逐題的主要文法欄、年度欄與文法類別總表的教科書對照欄｜母體：146 題主要文法歸屬已確認的題目｜翰林與康軒兩欄都是文法類別總表的既有欄位，只供辨識這個文法在教材裡叫什麼</p><div class="so"><b>小結</b>　這 14 個文法在 5 個以上的年度都有題目用到（目前已確認的歸屬），合計 99 題。另有 <b>16</b> 個文法只在 1 個年度出現過（合計 19 題）。<b>這是「在多個年度都出現過」的清單，不是教學順序，也不代表這些內容應該先編寫。</b></div></div>
+<div class="ex" id="x8"><h3 class="ex-t"><span class="ex-n">圖表 8</span><span>這些題目的文法，分屬哪些課綱大類</span></h3><div class="chart"><svg viewBox="0 0 880 671" role="img"><rect x="250" y="0" width="560.0" height="26" fill="var(--accent)"/><text x="817.0" y="18" font-size="13" fill="#43433F">38 題</text><text x="240" y="18" font-size="13.5" fill="#191917" text-anchor="end">子句</text><rect x="250" y="35" width="471.6" height="26" fill="var(--accent)"/><text x="728.6" y="53" font-size="13" fill="#43433F">32 題</text><text x="240" y="53" font-size="13.5" fill="#191917" text-anchor="end">時式</text><rect x="250" y="70" width="265.3" height="26" fill="var(--accent)"/><text x="522.3" y="88" font-size="13" fill="#43433F">18 題</text><text x="240" y="88" font-size="13.5" fill="#191917" text-anchor="end">形容詞</text><rect x="250" y="105" width="221.1" height="26" fill="var(--accent)"/><text x="478.1" y="123" font-size="13" fill="#43433F">15 題</text><text x="240" y="123" font-size="13.5" fill="#191917" text-anchor="end">句子的分類</text><rect x="250" y="140" width="147.4" height="26" fill="var(--accent)"/><text x="404.4" y="158" font-size="13" fill="#43433F">10 題</text><text x="240" y="158" font-size="13.5" fill="#191917" text-anchor="end">代名詞</text><rect x="250" y="175" width="132.6" height="26" fill="var(--accent)"/><text x="389.6" y="193" font-size="13" fill="#43433F">9 題</text><text x="240" y="193" font-size="13.5" fill="#191917" text-anchor="end">數量詞</text><rect x="250" y="210" width="73.7" height="26" fill="var(--accent)"/><text x="330.7" y="228" font-size="13" fill="#43433F">5 題</text><text x="240" y="228" font-size="13.5" fill="#191917" text-anchor="end">其他</text><rect x="250" y="245" width="58.9" height="26" fill="var(--accent)"/><text x="315.9" y="263" font-size="13" fill="#43433F">4 題</text><text x="240" y="263" font-size="13.5" fill="#191917" text-anchor="end">不定詞</text><rect x="250" y="280" width="58.9" height="26" fill="var(--accent)"/><text x="315.9" y="298" font-size="13" fill="#43433F">4 題</text><text x="240" y="298" font-size="13.5" fill="#191917" text-anchor="end">動名詞</text><rect x="250" y="315" width="44.2" height="26" fill="var(--accent)"/><text x="301.2" y="333" font-size="13" fill="#43433F">3 題</text><text x="240" y="333" font-size="13.5" fill="#191917" text-anchor="end">助動詞</text><rect x="250" y="350" width="44.2" height="26" fill="var(--accent)"/><text x="301.2" y="368" font-size="13" fill="#43433F">3 題</text><text x="240" y="368" font-size="13.5" fill="#191917" text-anchor="end">感官動詞</text><rect x="250" y="385" width="44.2" height="26" fill="var(--accent)"/><text x="301.2" y="403" font-size="13" fill="#43433F">3 題</text><text x="240" y="403" font-size="13.5" fill="#191917" text-anchor="end">連接詞</text><rect x="250" y="420" width="14.7" height="26" fill="var(--accent)"/><text x="271.7" y="438" font-size="13" fill="#43433F">1 題</text><text x="240" y="438" font-size="13.5" fill="#191917" text-anchor="end">介詞與介系詞片語</text><rect x="250" y="455" width="14.7" height="26" fill="var(--accent)"/><text x="271.7" y="473" font-size="13" fill="#43433F">1 題</text><text x="240" y="473" font-size="13.5" fill="#191917" text-anchor="end">使役動詞</text><rect x="250" y="490" width="0.0" height="26" fill="var(--accent)"/><text x="257.0" y="508" font-size="13" fill="#43433F">0 題</text><text x="240" y="508" font-size="13.5" fill="#191917" text-anchor="end">冠詞</text><rect x="250" y="525" width="0.0" height="26" fill="var(--accent)"/><text x="257.0" y="543" font-size="13" fill="#43433F">0 題</text><text x="240" y="543" font-size="13.5" fill="#191917" text-anchor="end">分詞</text><rect x="250" y="560" width="0.0" height="26" fill="var(--accent)"/><text x="257.0" y="578" font-size="13" fill="#43433F">0 題</text><text x="240" y="578" font-size="13.5" fill="#191917" text-anchor="end">副詞</text><rect x="250" y="595" width="0.0" height="26" fill="var(--accent)"/><text x="257.0" y="613" font-size="13" fill="#43433F">0 題</text><text x="240" y="613" font-size="13.5" fill="#191917" text-anchor="end">名詞</text><rect x="250" y="630" width="0.0" height="26" fill="var(--accent)"/><text x="257.0" y="648" font-size="13" fill="#43433F">0 題</text><text x="240" y="648" font-size="13.5" fill="#191917" text-anchor="end">指示詞</text></svg><div class="axis">橫軸：<b>目前已確認的作答作用題數</b>｜母體：146 題（第一大題 88 題＋第二大題 58 題）｜每一條是一個課綱大類，19 個大類全部列出</div></div><div class="tw"><table class="sum"><thead><tr><th>課綱大類</th><th class="r">目前已確認的作答作用題數</th><th class="r">第一大題</th><th class="r">第二大題</th><th class="r">占 146 題</th></tr></thead><tbody><tr><td>子句</td><td class="r"><b>38</b></td><td class="r">15</td><td class="r">23</td><td class="r">26.0%</td></tr><tr><td>時式</td><td class="r"><b>32</b></td><td class="r">26</td><td class="r">6</td><td class="r">21.9%</td></tr><tr><td>形容詞</td><td class="r"><b>18</b></td><td class="r">5</td><td class="r">13</td><td class="r">12.3%</td></tr><tr><td>句子的分類</td><td class="r"><b>15</b></td><td class="r">12</td><td class="r">3</td><td class="r">10.3%</td></tr><tr><td>代名詞</td><td class="r"><b>10</b></td><td class="r">9</td><td class="r">1</td><td class="r">6.8%</td></tr><tr><td>數量詞</td><td class="r"><b>9</b></td><td class="r">5</td><td class="r">4</td><td class="r">6.2%</td></tr><tr><td>其他</td><td class="r"><b>5</b></td><td class="r">2</td><td class="r">3</td><td class="r">3.4%</td></tr><tr><td>不定詞</td><td class="r"><b>4</b></td><td class="r">2</td><td class="r">2</td><td class="r">2.7%</td></tr><tr><td>動名詞</td><td class="r"><b>4</b></td><td class="r">3</td><td class="r">1</td><td class="r">2.7%</td></tr><tr><td>助動詞</td><td class="r"><b>3</b></td><td class="r">2</td><td class="r">1</td><td class="r">2.1%</td></tr><tr><td>感官動詞</td><td class="r"><b>3</b></td><td class="r">3</td><td class="r">0</td><td class="r">2.1%</td></tr><tr><td>連接詞</td><td class="r"><b>3</b></td><td class="r">3</td><td class="r">0</td><td class="r">2.1%</td></tr><tr><td>介詞與介系詞片語</td><td class="r"><b>1</b></td><td class="r">1</td><td class="r">0</td><td class="r">0.7%</td></tr><tr><td>使役動詞</td><td class="r"><b>1</b></td><td class="r">0</td><td class="r">1</td><td class="r">0.7%</td></tr><tr><td>冠詞</td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td class="r">—</td></tr><tr><td>分詞</td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td class="r">—</td></tr><tr><td>副詞</td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td class="r">—</td></tr><tr><td>名詞</td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td class="r">—</td></tr><tr><td>指示詞</td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td class="r">—</td></tr><tr><td><b>合計</b></td><td class="r"><b>146</b></td><td class="r"><b>88</b></td><td class="r"><b>58</b></td><td class="r">100.0%</td></tr></tbody></table></div><p class="src">依據：逐題的主要文法欄對應到文法類別總表的課綱大類欄｜母體：146 題主要文法歸屬已確認的題目</p><div class="so"><b>小結</b>　子句 38 題、時式 32 題、形容詞 18 題，三者合計 88 題，占 60.3%。兩個大題的組成不同：第一大題以時式為多（26 題），第二大題以子句為多（23 題）。<b>冠詞、分詞、副詞、名詞、指示詞 這 5 個大類目前是 0 題。</b></div></div>
+<div class="ex" id="x9"><h3 class="ex-t"><span class="ex-n">圖表 9</span><span>這些題目的文法，課綱條目表標的建議學習年級</span></h3><div class="chart"><svg viewBox="0 0 880 216" role="img"><rect x="250" y="0" width="214.5" height="26" fill="var(--accent)"/><text x="471.5" y="18" font-size="13" fill="#43433F">18 題</text><text x="240" y="18" font-size="13.5" fill="#191917" text-anchor="end">7上</text><rect x="250" y="35" width="274.0" height="26" fill="var(--accent)"/><text x="531.0" y="53" font-size="13" fill="#43433F">23 題</text><text x="240" y="53" font-size="13.5" fill="#191917" text-anchor="end">7下</text><rect x="250" y="70" width="297.9" height="26" fill="var(--accent)"/><text x="554.9" y="88" font-size="13" fill="#43433F">25 題</text><text x="240" y="88" font-size="13.5" fill="#191917" text-anchor="end">8上</text><rect x="250" y="105" width="560.0" height="26" fill="var(--accent)"/><text x="817.0" y="123" font-size="13" fill="#43433F">47 題</text><text x="240" y="123" font-size="13.5" fill="#191917" text-anchor="end">8下</text><rect x="250" y="140" width="333.6" height="26" fill="var(--accent)"/><text x="590.6" y="158" font-size="13" fill="#43433F">28 題</text><text x="240" y="158" font-size="13.5" fill="#191917" text-anchor="end">9上</text><rect x="250" y="175" width="59.6" height="26" fill="var(--accent)"/><text x="316.6" y="193" font-size="13" fill="#43433F">5 題</text><text x="240" y="193" font-size="13.5" fill="#191917" text-anchor="end">條目未標年級</text></svg><div class="axis">橫軸：<b>目前已確認的作答作用題數</b>｜母體：146 題｜每一條是課綱條目表既有的建議學習年級欄位值，不是本報告的課程建議</div></div><p class="src">依據：文法類別總表的建議學習年級欄｜母體：146 題主要文法歸屬已確認的題目｜5 題的文法條目沒有標年級</p><div class="so"><b>小結</b>　目前已確認的 146 題中，文法條目標為八年級下學期或更早的有 113 題（77.4%）。<b>「建議學習年級」是課綱條目表的既有欄位</b>，本報告只是照該欄位分組計數，沒有提出任何課程年級建議，也不能讀成「這些內容應該在某個年級教」。</div></div>
+</div></section>
+<section id="q"><div class="wrap">
+<div class="so" style="margin:0">逐題與逐類的查詢工具另存一頁：同一份凍結資料，2,922 筆文法出現紀錄全部帶入，可依年度、大題、出現位置篩選並當場重算；每一筆可展開逐筆出現證據、真實例題與逐字判斷理由。該檔未隨本頁公開，需要時請向研究者索取。</div>
+</div></section>
+<section id="state"><div class="wrap">
+<div class="sechd"><span class="secno">完整度</span><h2>這些數字有多完整</h2></div>
+<div class="prose"><p>2,922 筆文法出現紀錄的逐筆判讀<b>已經全部完成</b>（11 個年度都已逐筆處理，2026-09-17 重算核對）。沒有進入上面統計的部分，不是還沒判讀，是<b>還沒歸到類別</b>。這個差別決定了上面的數字之後會怎麼變。</p></div>
+<div class="tw"><table class="sum"><thead><tr><th>狀態</th><th class="r">筆數</th><th class="r">占 2,922 筆</th><th class="plain">意思</th></tr></thead><tbody><tr><td>已對應到一個文法類別</td><td class="r"><b>1,799</b></td><td class="r">61.6%</td><td class="plain">進入上面所有統計。其中完全對應 1,271、部分對應 528。</td></tr><tr><td>現有 78 個類別裡沒有對應的</td><td class="r"><b>681</b></td><td class="r">23.3%</td><td class="plain">判讀已完成，但依方法文件不得硬歸、不得自創類別，因此另外記錄。</td></tr><tr><td>等研究者裁定</td><td class="r"><b>442</b></td><td class="r">15.1%</td><td class="plain">歸屬還沒定案，不計入上面的統計，也不記為 0。</td></tr><tr><td><b>合計</b></td><td class="r"><b>2,922</b></td><td class="r">100.0%</td><td class="plain"></td></tr></tbody></table></div>
+<p class="src">依據：文法出現紀錄的處理狀態欄、對應狀態欄與證據狀態欄｜母體：2,922 筆文法出現紀錄</p>
+<div class="tw"><table><thead><tr><th>項目</th><th class="r">數量</th><th class="plain">說明</th></tr></thead><tbody><tr><td>有已確認紀錄的文法類別</td><td class="r"><b>68</b>／78</td><td class="plain">其中 61 個有文章層的數值（另 7 個的紀錄只在題幹或選項上），41 個的作答題數大於 0。</td></tr><tr><td>這 11 年還沒查到紀錄的文法類別</td><td class="r">10</td><td class="plain">所以它們沒有數字。</td></tr><tr><td>作答要判斷文法、但現有類別沒有對應的題目</td><td class="r">59</td><td class="plain">判定成立，缺的是類別。</td></tr><tr><td>作答要判斷文法、文法歸屬等裁定的題目</td><td class="r">40</td><td class="plain">類別層的題數不含這些題，也不記為 0。</td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>檢查</th><th class="plain">意思</th><th>目前</th></tr></thead><tbody><tr><td>① 自驗</td><td class="plain">產出的一方對自己的產物跑機械檢查。</td><td><b>已完成</b></td></tr><tr><td>② 隔離脈絡第二意見</td><td class="plain">另一個沒有接觸本次工作脈絡的助手，只依產物與授權原文審核。</td><td>部分完成（限統計單位與缺漏呈現）</td></tr><tr><td>③ 獨立複審</td><td class="plain">由另一個獨立的一方複審語意判斷。</td><td><b>尚未完成</b></td></tr><tr><td>④ 研究者驗收</td><td class="plain">研究者最終驗收。</td><td><b>尚未驗收</b></td></tr></tbody></table></div>
+<div class="so"><b>小結</b>　上面的題數與筆數<b>只會往上修，不會往下修</b>：681 筆與 442 筆一旦歸入類別，只會增加某些文法的數字。461 題的分類判定本身已逐題完成，不受歸類進度影響。四種檢查互不抵充，③④ 未完成，所以這份資料還不是定版。</div>
+</div></section>
+<section id="next"><div class="wrap">
+<div class="sechd"><span class="secno">下一步</span><h2>下一步</h2></div>
+<h3>研究線（取自研究線自己的進度紀錄，2026-09-17）</h3>
+<div class="step">
+<div class="it"><div class="nm">第一項</div><div class="bd"><b>語意的獨立複審</b>——整合輸出與其下游五個分析包尚未複審。<div class="who">卡在：負責複審的一方使用額度 2026-09-17 達上限；恢復後仍須由同一方完成，期間其他檢查不得抵充。誰決定：研究者。</div></div></div>
+<div class="it"><div class="nm">第二項</div><div class="bd"><b>442 筆文法出現紀錄的歸屬待裁定。</b><div class="who">卡在：需要研究者逐筆判斷歸屬。誰決定：研究者。</div></div></div>
+<div class="it"><div class="nm">第三項</div><div class="bd"><b>7 項待判斷清單與 2 項例外</b>（下表），研究者三個回覆欄目前全部空白。<div class="who">卡在：等研究者填寫。誰決定：研究者。</div></div></div>
+<div class="it"><div class="nm">第四項</div><div class="bd"><b>要不要擴充文法類別</b>——681 筆紀錄與 59 題沒有對應類別。<div class="who">卡在：擴充類別會改動分類表本身，超出本階段授權。誰決定：研究者。</div></div></div>
+<div class="it"><div class="nm">第五項</div><div class="bd"><b>研究者驗收</b>——前四項完成後才進行。<div class="who">卡在：前四項未完成。誰決定：研究者。</div></div></div>
+</div>
+<div class="tw"><table><thead><tr><th>項目</th><th>文法</th><th>統計範圍</th><th>狀態</th></tr></thead><tbody><tr><td>RRQ-03</td><td>由 that 引導的名詞子句 <span class="dim mono">G069</span></td><td>全體</td><td>尚待研究者判斷</td></tr><tr><td>RRQ-04</td><td>人 + used to + VP <span class="dim mono">G077</span></td><td>全體</td><td>尚待研究者判斷</td></tr><tr><td>RRQ-05</td><td>以 there 為主的引介句 <span class="dim mono">G052</span></td><td>第二大題</td><td>尚待研究者判斷</td></tr><tr><td>RRQ-06</td><td>現在進行式：直述／否定／疑問及答句 <span class="dim mono">G062</span></td><td>第二大題</td><td>尚待研究者判斷</td></tr><tr><td>RRQ-07</td><td>現在完成式：直述／否定／疑問及答句 <span class="dim mono">G063</span></td><td>第二大題</td><td>尚待研究者判斷</td></tr><tr><td>RRQ-08</td><td>由 that 引導的名詞子句 <span class="dim mono">G069</span></td><td>第二大題</td><td>尚待研究者判斷</td></tr><tr><td>RRQ-09</td><td>人 + used to + VP <span class="dim mono">G077</span></td><td>第二大題</td><td>尚待研究者判斷</td></tr><tr><td>EXC-01</td><td>所有格代名詞 mine/yours <span class="dim mono">G008</span></td><td>全體</td><td>尚待研究者裁定</td></tr><tr><td>EXC-02</td><td>and 與 but 的用法 <span class="dim mono">G036</span></td><td>全體</td><td>尚待研究者裁定</td></tr></tbody></table></div>
+<p class="src">依據：待判斷清單與例外清單｜母體：7 項待判斷項目與 2 項例外｜清單所用門檻為研究者核准的探索性門檻，依原文不得升格為正式方法或教學分類規則</p>
+<h3>不需要等裁定就能做的三件事（只用目前已確認的紀錄）</h3>
+<div class="prose"><p>以下三件都是<b>素材取用與分流</b>，不涉及教學順序或課程優先序；那兩件事本研究的判準明文不處理（見附錄 D）。</p></div>
+<div class="step">
+<div class="it"><div class="nm">第一件</div><div class="bd">用查詢區抽 <b>245 題</b>作答要判斷文法的題目當素材：每題可展開題幹、四個選項、正解，以及逐字引用的判斷理由，可以逐題判斷適不適合放進某個練習。<div class="who">59 題還沒有對應的文法類別，用題目本身的判斷理由即可，不必等分類。</div></div></div>
+<div class="it"><div class="nm">第二件</div><div class="bd">照<b>圖表 3</b>把素材分流：第一大題的題目以文法形式辨識為主（109 題裡 65 題），第二大題以語意關係理解與語用功能理解為主（136 題裡 102 題），兩邊的題目形態不同，混在一起會失焦。<div class="who">這是兩個大題的作用類型分布，不是難度，也不是先後順序。</div></div></div>
+<div class="it"><div class="nm">第三件</div><div class="bd">用<b>圖表 7</b>的 14 個類別對照教科書欄位（翰林、康軒）與課綱條目表的建議學習年級，確認「同一個文法在教材裡叫什麼」，以便把題目素材掛到既有教材結構上。<div class="who">教科書欄與年級欄都是既有參考欄位，不是本報告的建議；這 14 個類別是「在多個年度都出現過」的清單，不是應該先做的清單。</div></div></div>
+</div>
+</div></section>
+<section id="apx"><div class="wrap">
+<div class="sechd"><span class="secno">附錄</span><h2>附錄</h2></div>
+<h3>附錄 A　報告用的名稱對應到哪個欄位</h3>
+<div class="tw"><table><thead><tr><th>本報告寫的名稱</th><th>資料裡的欄位</th><th>來源檔案</th></tr></thead><tbody><tr><td>題型（單字／文法／閱讀）</td><td><code>主要類別</code></td><td>retrospective_integrated_questions_v1.csv（研究者 2026-09-15 核准的分組）</td></tr><tr><td>文法作用（六個值）</td><td><code>grammar_role</code></td><td>retrospective_integrated_questions_v1.csv／115_Development_Gold_Freeze_v1.2 (1).xlsx 對照中文</td></tr><tr><td>主要作答技能</td><td><code>skill_focus</code></td><td>retrospective_integrated_questions_v1.csv／115_Development_Gold_Freeze_v1.2 (1).xlsx 對照中文</td></tr><tr><td>對應文法類別／文法編號</td><td><code>primary_grammar_id</code></td><td>retrospective_integrated_questions_v1.csv</td></tr><tr><td>文法焦點</td><td><code>grammar_focus</code></td><td>retrospective_integrated_questions_v1.csv</td></tr><tr><td>判斷理由</td><td><code>reason</code></td><td>retrospective_integrated_questions_v1.csv</td></tr><tr><td>出現在幾篇文章</td><td><code>已確認曝露_涉及題組數_跨年去重</code></td><td>retrospective_gid_cross_year_v1.csv</td></tr><tr><td>總共出現幾次</td><td><code>已確認曝露_出現次數</code></td><td>retrospective_gid_cross_year_v1.csv</td></tr><tr><td>在幾題的題幹或選項出現</td><td><code>已確認曝露_題目自身出現題數_跨年去重</code></td><td>retrospective_gid_cross_year_v1.csv</td></tr><tr><td>可查到的題號數</td><td><code>連結題數_跨年去重_僅供查題</code></td><td>retrospective_gid_cross_year_v1.csv</td></tr><tr><td>作答要判斷它的題數</td><td>由 <code>grammar_role</code> 落在四個有作用的值、且 <code>primary_grammar_id</code> 為該類別、<code>evidence_state</code> 為已確認的題目計數而得（與 <code>功能_主要題數_已確認</code> 逐格一致）</td><td>retrospective_integrated_questions_v1.csv／retrospective_gid_cross_year_v1.csv</td></tr><tr><td>課綱大類／課綱條目／建議學習年級</td><td><code>課綱大類</code>／<code>課綱條目</code>／<code>建議學習年級</code></td><td>retrospective_gid_cross_year_v1.csv</td></tr><tr><td>翰林iE 文法焦點／康軒 文法要點</td><td><code>翰林iE 文法焦點</code>／<code>康軒 文法要點</code></td><td>retrospective_gid_cross_year_v1.csv</td></tr><tr><td>資料涵蓋狀態</td><td><code>coverage_state</code></td><td>retrospective_gid_cross_year_v1.csv</td></tr><tr><td>出現位置（文章／題幹／選項）</td><td><code>source_scope</code></td><td>retrospective_integrated_occurrences_v1.csv</td></tr><tr><td>處理狀態（已對應／沒有對應／等裁定）</td><td><code>曝露分流</code></td><td>retrospective_integrated_occurrences_v1.csv</td></tr><tr><td>缺的是什麼</td><td><code>count_eligibility_reason</code> 內標註的缺口名稱／<code>taxonomy_gap</code></td><td>retrospective_integrated_occurrences_v1.csv／retrospective_integrated_questions_v1.csv</td></tr></tbody></table></div>
+<p class="src">本報告不使用資料裡沒有的量：沒有名次、沒有相關係數、沒有指數，也不為任何合計另取名字。</p>
+<h3>附錄 B　三個資料涵蓋狀態的逐字原文</h3>
+<div class="tw"><table><thead><tr><th>底層代碼</th><th>本報告寫的名稱</th><th>逐字原文（該值的第一列）</th></tr></thead><tbody><tr><td><code>complete</code></td><td>已無待確認項</td><td>已確認曝露與功能數皆無會影響本列的待決項</td></tr><tr><td><code>limited</code></td><td>仍有待確認項</td><td>有已確認曝露，但存在會影響本列的待決項（未歸屬 occurrence 曾列本 G-ID 為候選 7 筆；功能候選 2 題／待決 0 題）</td></tr><tr><td><code>not_established</code></td><td>尚無可確認紀錄</td><td>本次已核對紀錄中無可確認曝露列；不等於該構式在試卷中出現 0 次，也不代表已驗證為零</td></tr></tbody></table></div>
+<h3>附錄 C　資料來源與稽核</h3>
+<div class="tw"><table><thead><tr><th>檔案</th><th>SHA-256</th></tr></thead><tbody><tr><td>RETROSPECTIVE_INTEGRATION_REPORT_v1.md</td><td><code style="font-size:11.5px">5be2d17320a71ea9266693fba4fe8f5fedce4aafe1dd33be7e1ec25bf744cb9d</code></td></tr><tr><td>retrospective_gid_cross_year_v1.csv</td><td><code style="font-size:11.5px">9209fb6f19117371284f1a3ccc1a57e7fb3c691ccb932379d403ece9514db12e</code></td></tr><tr><td>retrospective_gid_year_section_v1.csv</td><td><code style="font-size:11.5px">35a9316bb859720ab165b4119bc0cb4d7f3a54b94dbf72b1966f56d1b786e0d4</code></td></tr><tr><td>retrospective_integrated_analysis_v1.html</td><td><code style="font-size:11.5px">f328336b50154313e3e6fd34068836c55c20344d4b4c1955424767f4187bf651</code></td></tr><tr><td>retrospective_integrated_occurrences_v1.csv</td><td><code style="font-size:11.5px">350bad88170da6e37dcb4af46772a7fa5995bf5c91caf7034a346484cf3250bf</code></td></tr><tr><td>retrospective_integrated_questions_v1.csv</td><td><code style="font-size:11.5px">b7c252bc47e937dbf801b9eb35d805adcff538542d24e3dffc9148b2caf5e822</code></td></tr><tr><td>retrospective_learning_hypotheses_v1.csv</td><td><code style="font-size:11.5px">a3e40d91d705dce3e32a04d97112f72a37f59899bccb88627f51a90578337c9f</code></td></tr><tr><td>verify_retrospective_integrated_v1.py</td><td><code style="font-size:11.5px">e471f614e57e04d29a632584b30de71fc242d20ea725229cd9eb030af95a9d1f</code></td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td>資料版本</td><td><code>integrated_analysis_v1</code>（2026-09-16 產出，一次抽取）</td></tr><tr><td>機械檢查程式</td><td><code>verify_retrospective_integrated_v1.py</code></td></tr><tr><td>機械檢查結果</td><td>15 組檢查，合計 172 項通過／0 項未通過</td></tr><tr><td>版控分支</td><td><code>functional-cross-year-v1</code></td></tr><tr><td>提交點</td><td><code>5ac763f1b0e158f903ab581996ef8f560060ff17</code></td></tr><tr><td>工作檔案狀態</td><td>產生時有 146 項未提交變更（既有基準問題，非本報告造成）</td></tr><tr><td>進度紀錄</td><td><code>production_inventory_checkpoint_v42.json</code>（2026-09-17）</td></tr><tr><td>產生腳本</td><td><code>build_progress_report_v8_2.py</code></td></tr><tr><td>查詢頁</td><td>另一份檔案，由同一支腳本產出、資料同源</td></tr><tr><td>複核腳本</td><td><code>verify_progress_report_v8_2.py</code></td></tr></tbody></table></div>
+<h4>中文名稱對照分頁的核對</h4>
+<div class="tw"><table><thead><tr><th>項目</th><th>數字</th></tr></thead><tbody><tr><td>倉庫內 <code>*.xlsx</code> 實體檔（<code>realpath</code> 去重）</td><td>53</td></tr><tr><td>其中含 <code>Display_Labels</code> 分頁者</td><td>30</td></tr><tr><td>內容分組數</td><td>4 組</td></tr><tr><td>本報告採用的基準檔</td><td><code>115_Development_Gold_Freeze_v1.2 (1).xlsx</code>（26 列／指紋 <code>ef3ae5f77ba5</code>）</td></tr></tbody></table></div>
+<h3>附錄 D　現階段不能從這份資料推出的結論</h3>
+<div class="tw"><table><thead><tr><th>不能推出</th><th>原因</th><th>什麼情況會改變</th></tr></thead><tbody><tr><td>學生的學習困難、哪些文法學生容易錯</td><td>本研究<b>完全沒有使用任何學生作答資料</b>。</td><td>取得學生作答資料並另行設計研究。</td></tr><tr><td>教學優先順序、課程順序、哪些文法該先教</td><td>判定門檻明文把「值得教」「對弱生重要」「具有 transferability」列為<b>不足以</b>判定的理由；判準只處理「這個文法有沒有參與區辨這一題的四個選項」。</td><td>研究者另行定義教學優先序的判準。</td></tr><tr><td>年度之間的高低比較、跨年度趨勢</td><td>方法文件規定 105–115 全部定版之前不得做或宣稱跨年度結論；且各年度的紀錄量同時反映該年出現多少與核對到什麼程度，目前無法分離。</td><td>11 個年度全部定版，並完成獨立複審與研究者驗收。</td></tr><tr><td>「某文法出現 N 次」是它在試卷上的完整總數</td><td>1,123 筆紀錄尚未歸入現有 78 個類別。</td><td>完成裁定或擴充類別後，數字往上修。</td></tr><tr><td>出題者的意圖</td><td>資料沒有這個欄位，本研究也沒有這個判準。</td><td>不會改變。</td></tr></tbody></table></div>
+</div></section>
+</main>
+<footer><div class="wrap"><div>105–115 年會考英文試題中的文法 ｜ 產生日期 2026-09-18</div><div style="margin-top:6px">逐題與逐類的查詢工具為另一份檔案，未隨本頁公開；需要時請向研究者索取。</div></div></footer>
+</body>
+</html>
